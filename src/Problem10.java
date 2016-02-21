@@ -14,9 +14,7 @@ public class Problem10 {
                     break;
                 }
             }
-            if (prime) {
-                sum += num;
-            }
+            if (prime) sum += num;
         }
         System.out.println(sum);
     }
