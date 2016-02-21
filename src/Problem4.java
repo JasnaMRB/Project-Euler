@@ -1,4 +1,5 @@
-import java.util.ArrayList;
+import java.time.Duration;
+import java.time.Instant;
 
 /**
  * Find the largest palindrome made from the product of two 3-digit numbers.
@@ -16,7 +17,7 @@ public class Problem4 {
     public static void main(String args[]) {
         int a = 999;
         int largest = 0;
-        long startTime = System.nanoTime();
+        Instant start = Instant.now();
            while (a >= 100) {
                 int b = 999;
                 while (b >= a) {
@@ -27,7 +28,7 @@ public class Problem4 {
                 a -= 1;
             }
         System.out.println(largest);
-        long endTime = System.nanoTime();
-        System.out.println("Duration: " + (endTime - startTime)/1000000 + " ms");
+        Instant end = Instant.now();
+        System.out.println("Duration: " + Duration.between(start,end));
     }
 }
